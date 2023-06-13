@@ -1,0 +1,64 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+}
+h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.title {
+  height: 150%;
+  width: 100vw;
+}
+#display {
+  /*Image containing div*/
+  position: relative;
+  margin-top: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*scroll activate via click in JS*/
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(+33%);
+  }
+}
+
+#images {
+  /*middle image*/
+  width: 700px;
+  height: auto;
+  cursor: zoom-in;
+}
+#prevImage {
+  /*left image*/
+  width: 400px;
+  height: auto;
+  filter: blur(1rem);
+}
+#nextImage {
+  /*right image*/
+  width: 400px;
+  height: auto;
+  filter: blur(1rem);
+}
